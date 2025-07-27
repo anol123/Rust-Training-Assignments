@@ -55,7 +55,7 @@ impl InMemoryCache {
         let store = self.store.lock().unwrap();
         store.get(key).and_then(|entry| {
             if Instant::now() < entry.expires_at {
-                Some(entry.value.clone()) // ✅ clone to avoid reference issues
+                Some(entry.value.clone()) //clone to avoid reference issues
             } else {
                 None
             }

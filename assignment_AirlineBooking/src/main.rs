@@ -32,29 +32,29 @@ fn main() {
             "2" => {
                 let (seat_number, name) = get_seat_and_name();
                 match plane.borrow_mut().book_seat(seat_number, name) {
-                    Ok(_) => println!("✅ Seat {} booked successfully!", seat_number),
-                    Err(e) => println!("❌ {}", e),
+                    Ok(_) => println!("Seat {} booked successfully!", seat_number),
+                    Err(e) => println!("{}", e),
                 }
             }
 
             "3" => {
                 let name = get_name_only();
                 match plane.borrow_mut().auto_book(name) {
-                    Ok(seat) => println!("✅ Auto-booked seat number: {}", seat),
-                    Err(e) => println!("❌ {}", e),
+                    Ok(seat) => println!("Auto-booked seat number: {}", seat),
+                    Err(e) => println!("{}", e),
                 }
             }
 
             "4" => {
                 let seat = get_seat_number_only();
                 match plane.borrow_mut().cancel_booking(seat) {
-                    Ok(_) => println!("✅ Seat {} cancelled.", seat),
-                    Err(e) => println!("❌ {}", e),
+                    Ok(_) => println!("Seat {} cancelled.", seat),
+                    Err(e) => println!("{}", e),
                 }
             }
 
             "5" => {
-                println!("⚠️ Simulating Overbooking...");
+                println!("Simulating Overbooking...");
                 let result = catch_unwind(AssertUnwindSafe(|| {
                     for i in 0..10 {
                         let name = format!("User{}", i);
@@ -63,16 +63,16 @@ fn main() {
                 }));
 
                 if result.is_err() {
-                    println!("💥 Panic occurred and was recovered!");
+                    println!("Panic occurred and was recovered!");
                 }
             }
 
             "6" => {
-                println!("👋 Exiting. Thank you for using the Airline Booking System.");
+                println!("Exiting. Thank you for using the Airline Booking System.");
                 break;
             }
 
-            _ => println!("❌ Invalid option. Please choose 1–6."),
+            _ => println!("Invalid option. Please choose 1–6."),
         }
     }
 }

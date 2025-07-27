@@ -1,0 +1,20 @@
+Logging to file.
+Logging to file.
+[INFO] File log: App started.
+[WARN] File log: Disk usage 90%.
+[ERROR] File log: Unrecoverable error.
+[INFO] File log: App started.
+[WARN] File log: Disk usage 90%.
+[ERROR] File log: Unrecoverable error.
+[INFO] File log: App started.
+[WARN] File log: Disk usage 90%.
+[ERROR] File log: Unrecoverable error.
+[INFO] File log: App started.
+[WARN] File log: Disk usage 90%.
+[ERROR] File log: Unrecoverable error.
+[INFO] File log: App started.
+[WARN] File log: Disk usage 90%.
+[ERROR] File log: Unrecoverable error.
+[INFO] File log: App started.
+[WARN] File log: Disk usage 90%.
+[ERROR] File log: Unrecoverable error.

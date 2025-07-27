@@ -47,10 +47,10 @@ fn is_eligible_for_loan(
     let total_income = income + get_coapplicant_income(co_applicant);
 
     if total_income >= loan_amount / 2 {
-        Ok(format!("✅ Loan Approved! Total income: {}", total_income))
+        Ok(format!("Loan Approved! Total income: {}", total_income))
     } else {
         Err(LoanError::IncomeError(format!(
-            "❌ Combined income {} is too low for loan {}",
+            "Combined income {} is too low for loan {}",
             total_income, loan_amount
         )))
     }
